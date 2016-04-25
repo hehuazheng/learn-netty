@@ -39,8 +39,8 @@ public class EchoClient {
 		}
 	}
 
-	public static void main(String[] args) {
-		new EchoClient("localhost", 7980);
+	public static void main(String[] args) throws Exception {
+		new EchoClient("localhost", 7980).start();
 	}
 
 }
