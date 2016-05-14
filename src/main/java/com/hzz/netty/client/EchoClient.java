@@ -34,7 +34,7 @@ public class EchoClient {
 					});
 			ChannelFuture f = b.connect().sync();
 			f.channel().closeFuture().sync();
-		} catch (Exception e) {
+		} finally  {
 			group.shutdownGracefully().sync();
 		}
 	}
